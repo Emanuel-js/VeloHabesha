@@ -24,7 +24,7 @@ export default function Footer() {
       </div>
 
       <div className="container copyright">
-        <p>&copy; 2024 Biker Community App. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} VeloHabesha. All rights reserved.</p>
       </div>
     </footer>
   );

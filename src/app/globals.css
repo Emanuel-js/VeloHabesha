@@ -144,6 +144,57 @@ p {
   border-color: var(--text-primary);
 }
 
+/* Form Input Styles */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--surface-highlight);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(255, 95, 31, 0.05);
+}
+
+.input-field::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+/* Date picker specific styles */
+.input-field[type="date"] {
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+.input-field[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: var(--transition-fast);
+}
+
+.input-field[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  filter: invert(1) brightness(1.2);
+}
+
+textarea.input-field {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select.input-field {
+  cursor: pointer;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
